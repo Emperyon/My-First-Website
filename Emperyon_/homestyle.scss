@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+$mid-black : #262626;
+$font-tophead : #f2f2f2;
+$mid-light : #f2f2f2;
+$main-light : #fff;
+$nav-light :#c2c2c2;
+$font-main : #d9d9d9;
+$red-highlight : #ff3333;
+$yellow-highlight : #ffcc00;
+$blue-highlight : #6666ff;
+
+
+.navbars {
+    background-color: #595959;
+    position: fixed;
+    width: 80px;
+    height: 100%;
+    z-index: 1;
+
+    .topnavs {
+        width: 80px;
+        height: 45%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        transition: 0.3s ease !important;
+    }
+
+    .bottomnav {
+        width: 80px;
+        height: 25%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        bottom: 0;
+        transition: 0.3s ease !important;
+    }
+
+        a {
+            &:hover {
+                background-color: #404040;
+            }
+            width: 80px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .ico {
+                font-size: 50px;
+                text-shadow: rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s ease !important;
+                color: white;
+                text-align: center;
+            }
+
+            &:hover {
+                transform: scale(1.07);
+                text-decoration: none;
+            }
+        }
+
+        a .actived {
+            color: #d3d3d3;
+            border-bottom: 4px solid $blue-highlight; 
+        }
+    }
+
+.headd {
+    background-color: $mid-black;
+    width: 100%;
+    position: fixed;
+    height: 40px;
+    z-index: 0;
+    top: 0;
+    color : #f2f2f2;
+
+    h4 {
+        border-top: 3px solid $blue-highlight;
+        width: 130px;
+        position: absolute;
+        left: 100px;
+        background-color: #404040;
+        padding: 10px;
+        color: #f2f2f2;
+        font-size: 16px;
+    }
+}
+
+body {
+    background-color: #404040 !important; 
+}
+
+footer {
+    background-color: $mid-black;
+    width: 100%;
+    height: 25px;
+    position: fixed;
+    z-index: 0;
+    bottom: 0;
+
+    a {
+        color: $font-tophead;
+        border-right: 1px solid white;
+        left: 90px;
+        padding-right: 5px;
+        bottom: 1px;
+        position: fixed ;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+            color: $font-tophead;
+        }
+    }
+}
+.iconbox {
+    position: fixed;
+    left: 100px;
+    width: 20%;
+    height: 25px;
+    bottom: 0;
+    z-index: 1;
+
+    .footicon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 20%;
+    height: 25px;
+    position: fixed;
+    margin-right: 10px;
+    font-size: 20px;
+    
+
+    .fa {
+        padding: 0;
+        margin: 10px;
+        color: white;
+        font-size: $font-tophead;
+    }
+}
+}
+
+
+.move {
+    position: fixed;
+    right: 130px;
+}
+
+.dropbtn {
+  background-color: #595959;
+  color: white;
+  padding: 4px;
+  width: 100px;
+  height: 40px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  &:hover, &:focus {
+    background-color: #c2c2c2;
+    outline: none;
+  }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+    a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        &:hover {
+            background-color: #ddd
+        }
+    }
+}
+
+.show {display:block;}
+
+
+.darkmoded {
+    position: fixed;
+    right: 20px;
+    
+    .btnn {
+        background-color: #595959;
+        color: white;
+        padding: 4px;
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+
+        &:hover, &:focus {
+            background-color: #c2c2c2;
+        }
+
+        &:active {
+            background-color: #404040;
+        } 
+    } 
+}
+
+.reddot {
+    background-color: $red-highlight;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.bluedot {
+    background-color: $blue-highlight;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.yellowdot {
+    background-color: $yellow-highlight;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.namee {
+    width: 100%;
+    height: 320px;
+    display: grid;
+    grid-template: 70px 100px 100px / 20% 20% 20% 20% 20%;
+    color: $font-main;
+
+    .namebox {
+        padding: 10px;
+        text-align: center;
+        grid-area: 2 / 2 / 3 / 5;
+    }
+
+    .namehead {
+        text-decoration: underline;
+        text-decoration-color: $blue-highlight;
+        margin: 10px;
+        font-size: 3em;
+    }
+}
