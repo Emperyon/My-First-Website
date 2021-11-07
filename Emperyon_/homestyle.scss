@@ -1,7 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-   
+}
+
+@font-face {
+    font-family: 'yekan';
+    src: url('Far_Yekan.tff');
 }
 
 $mid-black : #262626;
@@ -14,13 +18,13 @@ $red-highlight : #ff3333;
 $yellow-highlight : #ffcc00;
 $blue-highlight : #6666ff;
 
-
 .navbars {
     background-color: #595959;
     position: fixed;
     width: 80px;
     height: 100%;
-    z-index: 1;
+    z-index: 3;
+    top: 0;
 
     .topnavs {
         width: 80px;
@@ -68,12 +72,17 @@ $blue-highlight : #6666ff;
                 transform: scale(1.07);
                 text-decoration: none;
             }
-        }
 
-        a .actived {
-            color: #d3d3d3;
-            border-bottom: 4px solid $blue-highlight; 
-        }
+            &:active {
+                color: #ccc;
+            }
+
+            a .actived {
+                color: #d3d3d3;
+                border-bottom: 4px solid $blue-highlight;
+                animation: glow 2s linear infinite; 
+            }
+        }  
     }
 
 .headd {
@@ -81,11 +90,11 @@ $blue-highlight : #6666ff;
     width: 100%;
     position: fixed;
     height: 40px;
-    z-index: 0;
+    z-index: 2;
     top: 0;
     color : #f2f2f2;
 
-    h4 {
+    a h4 {
         border-top: 3px solid $blue-highlight;
         width: 130px;
         position: absolute;
@@ -94,6 +103,7 @@ $blue-highlight : #6666ff;
         padding: 10px;
         color: #f2f2f2;
         font-size: 16px;
+        z-index: 1;
     }
 }
 
@@ -101,12 +111,22 @@ body {
     background-color: #404040 !important; 
 }
 
+.fullcontent {
+    z-index: 1;
+    height: auto;
+    width: calc(100% - 80px);
+    position: relative;
+    top: 40px;
+    right: -80px;
+}
+
+
 footer {
     background-color: $mid-black;
     width: 100%;
     height: 25px;
     position: fixed;
-    z-index: 0;
+    z-index: 2;
     bottom: 0;
 
     a {
@@ -124,13 +144,14 @@ footer {
         }
     }
 }
+
 .iconbox {
     position: fixed;
     left: 100px;
     width: 20%;
     height: 25px;
     bottom: 0;
-    z-index: 1;
+    z-index: 3;
 
     .footicon {
     display: flex;
@@ -138,9 +159,9 @@ footer {
     align-items: center;
     width: 20%;
     height: 25px;
-    position: fixed;
     margin-right: 10px;
     font-size: 20px;
+    position: fixed;
     
 
     .fa {
@@ -148,10 +169,79 @@ footer {
         margin: 10px;
         color: white;
         font-size: $font-tophead;
+
+        &:hover  {
+            transform: scale(1.06);
+        }
+
+        &:active {
+            color: #ccc;
+        }
     }
 }
 }
 
+@keyframes example {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+        transform: scale(1.05);
+    }
+    100% {
+        border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+.blobs {
+    position: fixed;
+    width: 100%;
+    height: 1000px;
+    z-index: 0;
+
+    .blob1 {
+        background-color: rgba(0, 0, 0, 0.15);
+        filter: blur(8px);
+        border-radius: 50%;
+        position: absolute;
+        left: 90px;
+        top: 50px;
+        width: 250px;
+        height: 250px;
+        animation-duration: 6s;
+        animation-name: example;
+        animation-iteration-count: infinite;
+    }
+
+    .blob2 {
+        background-color: rgba(0,0,0,0.1);
+        filter: blur(8px);
+        position: absolute;
+        left: 250px;
+        top: 200px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        animation-duration: 5s;
+        animation-name: example;
+        animation-iteration-count: infinite;
+    }
+
+    .blob3 {
+        position: absolute;
+        filter: blur(8px);
+        background-color: rgba(0,0,0,0.1);
+        border-radius: 50%;
+        width: 320px;
+        height: 320px;
+        top: 100px;
+        right: 100px;
+        animation-duration: 4s;
+        animation-name: example;
+        animation-iteration-count: infinite;
+    }
+}
 
 .move {
     position: fixed;
@@ -178,6 +268,7 @@ footer {
 .dropdown {
     position: relative;
     display: inline-block;
+    z-index: 1;
 }
 
 .dropdown-content {
@@ -193,6 +284,7 @@ footer {
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+
         &:hover {
             background-color: #ddd
         }
@@ -205,6 +297,7 @@ footer {
 .darkmoded {
     position: fixed;
     right: 20px;
+    z-index: 1;
     
     .btnn {
         background-color: #595959;
@@ -265,6 +358,7 @@ footer {
         padding: 10px;
         text-align: center;
         grid-area: 2 / 2 / 3 / 5;
+       
     }
 
     .namehead {
@@ -272,5 +366,235 @@ footer {
         text-decoration-color: $blue-highlight;
         margin: 10px;
         font-size: 3em;
+        font-family: 'Raleway', sans-serif;
     }
 }
+
+//slideshow
+.moveslide {
+    position: relative;
+    bottom: 80px;
+}
+
+.slidebox {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    height: 400px;
+    box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, 0.5);
+}
+
+.slidetext {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.intro {
+    width: 100%;
+    height: 380px;
+    background-color: rgba(0,0,0,0.2);
+    padding: 30px 0;
+
+    .introbox {
+        position: relative;
+        margin: 0 auto;
+        width: 600px;
+        height: 380px;
+        font-size: 20px;
+        color: $font-main;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        
+
+        p {
+            box-sizing: border-box;
+            padding: 30px 0;
+            line-height: 2em;
+            font-size: 24px;
+            font-weight: 400;
+            font-family: 'yekan';
+            
+        }
+
+        h1 {
+            text-align: center; 
+            border-bottom: 2px solid $mid-light;
+            width: 200px;
+            padding-bottom: 20px;
+
+            .nameinpara {
+                text-decoration: underline;
+                text-decoration-color: $blue-highlight;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+
+::-webkit-scrollbar {
+    background-color: #a5a5a5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    background-color: #202020;
+}
+
+.carasouls {
+    width: calc(100% - 80px);
+    margin: 0 40px;
+    height: 1300px;
+     
+}
+
+.aboutsec {
+    width: 100%;
+    height: 400px;
+    color: $font-main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 500px;
+        height: 300px;
+        position: relative;
+        left: 0;
+        justify-self: flex-start;
+        border-radius: 20px 0 0 20px;
+    }
+    
+    .textsec1 {
+        width: 600px;
+        height: 300px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-right: 4px solid $blue-highlight;
+
+        h1 {
+            margin: 20px 0;
+        }   
+    } 
+}
+
+.projectsec {
+    width: 100%;
+    height: 400px;
+    color: $font-main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+        width: 500px;
+        height: 300px;
+        position: relative;
+        right: 0;
+        justify-self: flex-end;
+        border-radius: 0 20px 20px 0;
+    }
+    
+    .textsec1 {
+        width: 600px;
+        height: 300px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-left: 4px solid $blue-highlight;
+
+        h1 {
+            margin: 20px 0;
+        }   
+    }
+}
+
+.contactsec {
+    width: 100%;
+    height: 400px;
+    color: $font-main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 500px;
+        height: 300px;
+        position: relative;
+        left: 0;
+        justify-self: flex-start;
+        border-radius: 20px 0 0 20px;
+    }
+    
+    .textsec1 {
+        width: 600px;
+        height: 300px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-right: 4px solid $blue-highlight;
+
+        h1 {
+            margin: 20px 0;
+        }   
+    } 
+}
+
+.movetext {
+    position: relative;
+    bottom: 80px;
+    height: 300px;
+}
+
+.bigtexts {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    height: 200px;
+    box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slidetexts {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+
+    .nameinpara {
+        text-decoration: underline;
+        text-decoration-color: $blue-highlight;
+        font-weight: 600;
+    }
+}
+
+.numbertexts {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
