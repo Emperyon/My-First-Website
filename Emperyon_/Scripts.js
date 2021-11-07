@@ -49,3 +49,19 @@ function showSlidess() {
     slidess[slideIndexx-1].style.display = 'block';
     setTimeout(showSlidess, 4000);
 }
+//end of text of elders
+//start of changing style
+
+//end of changing style
+//start of highlights
+function toggleThem(value) {
+    var sheets = document.getElementsByTagName('link');
+
+    sheets[0].href = value;
+}
+
+function toggleThemm(value) {
+    var sheets = document.getElementsByTagName('link');
+
+    sheets[0].href = value;
+}

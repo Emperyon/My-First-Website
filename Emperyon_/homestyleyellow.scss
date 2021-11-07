@@ -16,7 +16,7 @@ $nav-light :#c2c2c2;
 $font-main : #d9d9d9;
 $red-highlight : #ff3333;
 $yellow-highlight : #ffcc00;
-$blue-highlight : #6666ff;
+$blue-highlight : #ffcc00;
 
 .navbars {
     background-color: #595959;
@@ -278,16 +278,16 @@ footer {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    color: #262626;
-    cursor: pointer;
 
     a {
-        color: #262626;
+        color: black;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
-        cursor: pointer;
-        
+
+        &:hover {
+            background-color: #ddd
+        }
     }
 }
 
@@ -330,7 +330,7 @@ footer {
 }
 
 .bluedot {
-    background-color: $blue-highlight;
+    background-color: #6666ff;
     width: 12px;
     height: 12px;
     border-radius: 50%;

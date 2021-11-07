@@ -102,7 +102,7 @@
 
 .navbars a a .actived {
   color: #d3d3d3;
-  border-bottom: 4px solid #6666ff;
+  border-bottom: 4px solid #ffcc00;
   -webkit-animation: glow 2s linear infinite;
           animation: glow 2s linear infinite;
 }
@@ -118,7 +118,7 @@
 }
 
 .headd a h4 {
-  border-top: 3px solid #6666ff;
+  border-top: 3px solid #ffcc00;
   width: 130px;
   position: absolute;
   left: 100px;
@@ -333,16 +333,17 @@ footer a:hover {
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  color: #262626;
-  cursor: pointer;
 }
 
 .dropdown-content a {
-  color: #262626;
+  color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  cursor: pointer;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
 }
 
 .show {
@@ -425,8 +426,8 @@ footer a:hover {
 
 .namee .namehead {
   text-decoration: underline;
-  -webkit-text-decoration-color: #6666ff;
-          text-decoration-color: #6666ff;
+  -webkit-text-decoration-color: #ffcc00;
+          text-decoration-color: #ffcc00;
   margin: 10px;
   font-size: 3em;
   font-family: 'Raleway', sans-serif;
@@ -513,8 +514,8 @@ footer a:hover {
 
 .intro .introbox h1 .nameinpara {
   text-decoration: underline;
-  -webkit-text-decoration-color: #6666ff;
-          text-decoration-color: #6666ff;
+  -webkit-text-decoration-color: #ffcc00;
+          text-decoration-color: #ffcc00;
   font-weight: 600;
 }
 
@@ -562,7 +563,7 @@ footer a:hover {
   height: 300px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.2);
-  border-right: 4px solid #6666ff;
+  border-right: 4px solid #ffcc00;
 }
 
 .aboutsec .textsec1 h1 {
@@ -598,7 +599,7 @@ footer a:hover {
   height: 300px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.2);
-  border-left: 4px solid #6666ff;
+  border-left: 4px solid #ffcc00;
 }
 
 .projectsec .textsec1 h1 {
@@ -634,7 +635,7 @@ footer a:hover {
   height: 300px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.2);
-  border-right: 4px solid #6666ff;
+  border-right: 4px solid #ffcc00;
 }
 
 .contactsec .textsec1 h1 {
@@ -671,8 +672,8 @@ footer a:hover {
 
 .slidetexts .nameinpara {
   text-decoration: underline;
-  -webkit-text-decoration-color: #6666ff;
-          text-decoration-color: #6666ff;
+  -webkit-text-decoration-color: #ffcc00;
+          text-decoration-color: #ffcc00;
   font-weight: 600;
 }
 
@@ -692,4 +693,4 @@ footer a:hover {
 .ainhome:visited {
   color: #f2f2f2;
 }
-/*# sourceMappingURL=homestyle.css.map */
+/*# sourceMappingURL=homestyleyellow.css.map */

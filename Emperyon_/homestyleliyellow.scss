@@ -8,18 +8,19 @@
     src: url('Far_Yekan.tff');
 }
 
-$mid-black : #262626;
-$font-tophead : #f2f2f2;
+$mid-black : #e2e2e2;
+$font-tophead : #262626;
+$nav-dark : #c2c2c2;
 $mid-light : #f2f2f2;
 $main-light : #fff;
 $nav-light :#c2c2c2;
-$font-main : #d9d9d9;
+$font-main : #262626;
 $red-highlight : #ff3333;
 $yellow-highlight : #ffcc00;
-$blue-highlight : #6666ff;
+$blue-highlight : #ffcc00;
 
 .navbars {
-    background-color: #595959;
+    background-color: $nav-dark;
     position: fixed;
     width: 80px;
     height: 100%;
@@ -36,6 +37,7 @@ $blue-highlight : #6666ff;
         position: fixed;
         top: 0;
         transition: 0.3s ease !important;
+        color: black;
     }
 
     .bottomnav {
@@ -48,6 +50,7 @@ $blue-highlight : #6666ff;
         position: fixed;
         bottom: 0;
         transition: 0.3s ease !important;
+        color: black;
     }
 
         a {
@@ -64,7 +67,7 @@ $blue-highlight : #6666ff;
                 font-size: 50px;
                 text-shadow: rgba(0, 0, 0, 0.5);
                 transition: transform 0.3s ease !important;
-                color: white;
+                color: black;
                 text-align: center;
             }
 
@@ -99,16 +102,16 @@ $blue-highlight : #6666ff;
         width: 130px;
         position: absolute;
         left: 100px;
-        background-color: #404040;
+        background-color: #fefefe;
         padding: 10px;
-        color: #f2f2f2;
+        color: #262626;
         font-size: 16px;
         z-index: 1;
     }
 }
 
 body {
-    background-color: #404040 !important; 
+    background-color: #fefefe !important; 
 }
 
 .fullcontent {
@@ -162,12 +165,13 @@ footer {
     margin-right: 10px;
     font-size: 20px;
     position: fixed;
+    color: black;
     
 
     .fa {
         padding: 0;
         margin: 10px;
-        color: white;
+        color: black;
         font-size: $font-tophead;
 
         &:hover  {
@@ -278,16 +282,16 @@ footer {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    color: #262626;
-    cursor: pointer;
 
     a {
-        color: #262626;
+        color: black;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
-        cursor: pointer;
-        
+
+        &:hover {
+            background-color: #ddd
+        }
     }
 }
 
@@ -330,7 +334,7 @@ footer {
 }
 
 .bluedot {
-    background-color: $blue-highlight;
+    background-color: #6666ff;
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -572,7 +576,7 @@ footer {
 }
 
 .slidetexts {
-    color: #f2f2f2;
+    color: $font-tophead;
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
@@ -605,3 +609,4 @@ footer {
         color: #f2f2f2;
     }
 }
+
