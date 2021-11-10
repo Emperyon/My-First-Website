@@ -18,6 +18,8 @@ $font-main : #262626;
 $red-highlight : #ff3333;
 $yellow-highlight : #ffcc00;
 $blue-highlight : #ffcc00;
+$fontsize-main : 23px;
+$fontsize-head : 40px;
 
 .navbars {
     background-color: $nav-dark;
@@ -37,7 +39,6 @@ $blue-highlight : #ffcc00;
         position: fixed;
         top: 0;
         transition: 0.3s ease !important;
-        color: black;
     }
 
     .bottomnav {
@@ -50,12 +51,12 @@ $blue-highlight : #ffcc00;
         position: fixed;
         bottom: 0;
         transition: 0.3s ease !important;
-        color: black;
     }
 
         a {
             &:hover {
                 background-color: #404040;
+
             }
             width: 80px;
             height: 100px;
@@ -74,19 +75,15 @@ $blue-highlight : #ffcc00;
             &:hover {
                 transform: scale(1.07);
                 text-decoration: none;
-            }
-
-            &:active {
-                color: #ccc;
-            }
-
-            a .actived {
-                color: #d3d3d3;
-                border-bottom: 4px solid $blue-highlight;
-                animation: glow 2s linear infinite; 
-            }
-        }  
+            } 
     }
+
+#actived {
+    color: #bbb;
+    background-color: #404040;
+    
+}
+} 
 
 .headd {
     background-color: $mid-black;
@@ -165,7 +162,6 @@ footer {
     margin-right: 10px;
     font-size: 20px;
     position: fixed;
-    color: black;
     
 
     .fa {
@@ -282,17 +278,20 @@ footer {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    color: black;
+    color: #262626;
+    cursor: pointer;
 
     a {
-        color: black;
+        color: #262626;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+        cursor: pointer;
 
         &:hover {
             background-color: #ddd;
         }
+        
     }
 }
 
@@ -352,109 +351,6 @@ footer {
     margin-left: 15px;
 }
 
-.namee {
-    width: 100%;
-    height: 320px;
-    display: grid;
-    grid-template: 70px 100px 100px / 20% 20% 20% 20% 20%;
-    color: $font-main;
-
-    .namebox {
-        padding: 10px;
-        text-align: center;
-        grid-area: 2 / 2 / 3 / 5;
-       
-    }
-
-    .namehead {
-        text-decoration: underline;
-        text-decoration-color: $blue-highlight;
-        margin: 10px;
-        font-size: 3em;
-        font-family: 'Raleway', sans-serif;
-    }
-}
-
-//slideshow
-.moveslide {
-    position: relative;
-    bottom: 80px;
-}
-
-.slidebox {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-    height: 400px;
-    box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, 0.5);
-}
-
-.slidetext {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-.intro {
-    width: 100%;
-    height: 380px;
-    background-color: rgba(0,0,0,0.2);
-    padding: 30px 0;
-
-    .introbox {
-        position: relative;
-        margin: 0 auto;
-        width: 600px;
-        height: 380px;
-        font-size: 20px;
-        color: $font-main;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        
-        
-
-        p {
-            box-sizing: border-box;
-            padding: 30px 0;
-            line-height: 2em;
-            font-size: 24px;
-            font-weight: 400;
-            font-family: 'yekan';
-            
-        }
-
-        h1 {
-            text-align: center; 
-            border-bottom: 2px solid $mid-light;
-            width: 200px;
-            padding-bottom: 20px;
-
-            .nameinpara {
-                text-decoration: underline;
-                text-decoration-color: $blue-highlight;
-                font-weight: 600;
-            }
-        }
-    }
-}
-
-
-
 ::-webkit-scrollbar {
     background-color: #a5a5a5;
 }
@@ -464,144 +360,6 @@ footer {
     background-color: #202020;
 }
 
-.carasouls {
-    width: calc(100% - 80px);
-    margin: 0 40px;
-    height: 1300px;
-     
-}
-
-.aboutsec {
-    width: 100%;
-    height: 400px;
-    color: $font-main;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-        width: 500px;
-        height: 300px;
-        position: relative;
-        left: 0;
-        justify-self: flex-start;
-        border-radius: 20px 0 0 20px;
-    }
-    
-    .textsec1 {
-        width: 600px;
-        height: 300px;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.2);
-        border-right: 4px solid $blue-highlight;
-
-        h1 {
-            margin: 20px 0;
-        }   
-    } 
-}
-
-.projectsec {
-    width: 100%;
-    height: 400px;
-    color: $font-main;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    img {
-        width: 500px;
-        height: 300px;
-        position: relative;
-        right: 0;
-        justify-self: flex-end;
-        border-radius: 0 20px 20px 0;
-    }
-    
-    .textsec1 {
-        width: 600px;
-        height: 300px;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.2);
-        border-left: 4px solid $blue-highlight;
-
-        h1 {
-            margin: 20px 0;
-        }   
-    }
-}
-
-.contactsec {
-    width: 100%;
-    height: 400px;
-    color: $font-main;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-        width: 500px;
-        height: 300px;
-        position: relative;
-        left: 0;
-        justify-self: flex-start;
-        border-radius: 20px 0 0 20px;
-    }
-    
-    .textsec1 {
-        width: 600px;
-        height: 300px;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.2);
-        border-right: 4px solid $blue-highlight;
-
-        h1 {
-            margin: 20px 0;
-        }   
-    } 
-}
-
-.movetext {
-    position: relative;
-    bottom: 80px;
-    height: 300px;
-}
-
-.bigtexts {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-    height: 200px;
-    box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.slidetexts {
-    color: $font-tophead;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 40%;
-    width: 100%;
-    text-align: center;
-    font-size: 24px;
-    font-family: 'Raleway', sans-serif;
-
-    .nameinpara {
-        text-decoration: underline;
-        text-decoration-color: $blue-highlight;
-        font-weight: 600;
-    }
-}
-
-.numbertexts {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
 .ainhome {
     color: #f2f2f2;
     text-decoration: none;
@@ -609,5 +367,274 @@ footer {
     &:visited {
         color: #f2f2f2;
     }
+}
+
+.procaption {
+    width: 100%;
+    height: 300px;
+    
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .captionbox {
+        width: 60%;
+        height: 300px;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            border-bottom: 3px solid $blue-highlight;
+            color: $font-tophead;
+            width: 300px;
+            justify-self: start;
+            font-size: $fontsize-head;
+            padding: 20px 0;
+        }
+
+        p {
+            color: $font-main;
+            font-size: $fontsize-main;
+            padding: 0 20px;
+            line-height: 2em;
+            font-family: 'yekan';
+        }
+    }
+}
+
+.projcard {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.probox {
+    width: 350px;
+    height: 500px;
+    transition: 0.4s;
+    
+
+    .frontcard {
+        width: 350px;
+        height: 200px;
+        position: relative;
+        z-index: 1;
+        transition: 0.4s;
+        border-radius: 20px 20px 0 0;
+
+        img {
+            width: 350px;
+            height: 200px;
+            border-radius: 20px 20px 0 0;
+        }
+    }
+
+    .backcard {
+        z-index: 0;
+        width: 350px;
+        height: 300px;
+        box-shadow: rgb(0, 0, 0)0px 20px 30px -10px;
+        background-color: #2c2c2c;
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        display: relative;
+        transform: translateY(-195px);
+        transition: 0.4s;
+        border-bottom: 3px solid $blue-highlight;
+        border-radius: 20px 20px 0 0;
+        
+
+        h1 {
+            font-size: 40px;
+            width: 300px;
+            border-bottom: 3px solid $blue-highlight;
+            text-align: center;
+        } 
+
+        p {
+            width: 80%;
+            height: auto;
+            position: relative;
+            font-size: 20px;
+            text-align: right;
+        }
+
+        .probtn {
+            padding: 10px 20px;
+            outline: none;
+            border-radius: 10px;
+            background-color: #a5a5a5;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+            color: $font-tophead;
+            cursor: pointer;
+
+            a {
+                color: $font-tophead;
+            }
+
+            &:active {
+                box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.6);
+                background-color: #a5a5a54d;
+            }
+        }
+        
+    }
+}
+
+.probox .backcard:hover {
+    transform: translateY(0);
+}
+
+.probox:hover .frontcard {
+    box-shadow: rgba(255, 255, 255, 0.226) 0px 30px 90px;
+
+}
+
+.resume {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: $font-main;
+    text-align: right;
+    font-family: 'yekan';
+
+    .resbox {
+        width: 80%;
+        height: 200px;
+
+        h1 {
+            padding: 10px 0;
+            margin: 20px 0;
+            text-decoration: underline;
+            text-decoration-color: $blue-highlight;
+            font-size: $fontsize-head;
+        }
+
+        p {
+            font-size: $fontsize-main;
+            margin: 26px 0;
+        }
+
+        a {
+            color: black;
+            width: 100px;
+            height: 40px;
+            padding: 10px 30px;
+            background-color: #a5a5a5;
+            outline: none;
+            font-size: 26px;
+
+            &:hover {
+                background-color: #a5a5a5e1;
+            }
+
+            &:active {
+                background-color: #a5a5a550;
+                color: white;
+
+            }
+        }
+    }
+    
+}
+
+.studies {
+    width: 100%;
+    height: 1600px;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+    .studybox {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        position: relative;
+        margin: auto;
+        margin: 30px auto;
+        height: 400px;
+
+        h1 {
+            border-bottom: 3px solid $blue-highlight;
+            width: 500px;
+            padding: 18px 12px;
+            color: $font-tophead;
+            text-align: center;
+            font-size: $fontsize-head;
+        }
+
+        p {
+            color: $font-main;
+            text-align: right;
+            margin: 50px 0;
+            font-family: 'yekan';
+            font-size: $fontsize-main;
+            word-spacing: 5px;
+            line-height: 38px;
+        }
+    }
+}
+
+.listing {
+    width: 80%;
+    height: 500px;
+    
+
+    ul li {
+        font-family: 'Raleway', sans-serif;
+        text-align: left;
+        color: $font-main;
+        font-size: $fontsize-main;
+        line-height: 40px;
+    }
+}
+
+.exp {
+    width: 80%;
+    height: 700px;
+    
+    
+
+    .phead {
+        font-size: $fontsize-main;
+        color: $font-main;
+        text-align: right;
+    }
+
+    ul {
+        width: 100%;
+        height: 900px;
+
+        li p {
+            font-size: $fontsize-main;
+            color: $font-main;
+            text-align: right;
+
+        }
+    }
+}
+
+.ending {
+    width: 100%;
+    height: 600px;
+    opacity: 0.6;
+    background-image: url('proend.jpg');
+    background-size: cover;
 }
 

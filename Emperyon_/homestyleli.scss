@@ -292,6 +292,10 @@ footer {
         display: block;
         cursor: pointer;
 
+        &:hover {
+            background-color: #ddd;
+        }
+
     }
 }
 
