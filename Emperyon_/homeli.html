@@ -4,7 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--home style css import-->
+    
     <link rel="stylesheet" href="./mainli/homeli/homestyleli.css">
+    <link rel="stylesheet" type="text/css" href="./main/home/darkmode.css">
     <title>Emperyon</title>
      <!--Default User icons-->
      <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,7 +49,7 @@
         </div>
     </div> 
     <div class='darkmoded'>
-        <button class='btnn'><a href="home.html">DarkMode</a></button>
+        <button class='btnn'><a class='ainhome' href='home.html'>DarkMode</a></button>
     </div>
 </section>
 <section class='blobs'>
@@ -145,7 +147,17 @@
     
 </div>
     <!--script file for site-->
-    <script src='./Scripts.js'></script>
+    <script src='./Scripts.js'>
+        const btn = document.querySelector('#btn');
+
+        btn.addEventListener('click', (e) => {
+            if(btn.checked == true) {
+                document.body.setAttribute('data-theme', 'dark')
+            } else {
+                document.body.setAttribute('data-theme', 'dark')
+            }
+        });
+    </script>
     
     <!--JS bootstrap intialiton-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
